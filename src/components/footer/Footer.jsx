@@ -12,7 +12,7 @@ const Footer = () => {
     <Box sx={{}}>
       <Box
         component="footer"
-        sx={{ mt: 'auto', backgroundColor: '#111', p: '30px 30px' }}
+        sx={{ backgroundColor: 'primary.bg', p: '20px 20px' }}
       >
         <Grid
           container
@@ -27,21 +27,24 @@ const Footer = () => {
             <Text
               name={'ĐẠI LỘC'}
               props={{
-                color: '#fff',
+                color: 'primary.color',
               }}
             />
           </Grid>
           <Grid item>
-            <Text name={'TRANG TRÍ NỘI THẤT'} props={{ color: '#fff' }} />
+            <Text
+              name={'TRANG TRÍ NỘI THẤT'}
+              props={{ color: 'primary.color' }}
+            />
           </Grid>
           <Grid item>
-            <Text name={'CÔNG TRÌNH'} props={{ color: '#fff' }} />
+            <Text name={'CÔNG TRÌNH'} props={{ color: 'primary.color' }} />
           </Grid>
           <Grid item>
-            <Text name={'TUYỂN DỤNG'} props={{ color: '#fff' }} />
+            <Text name={'TUYỂN DỤNG'} props={{ color: 'primary.color' }} />
           </Grid>
           <Grid item>
-            <Text name={'LIÊN HỆ'} props={{ color: '#fff' }} />
+            <Text name={'LIÊN HỆ'} props={{ color: 'primary.color' }} />
           </Grid>
         </Grid>
         <Divider />
@@ -63,7 +66,7 @@ const Footer = () => {
         >
           <Typography
             sx={{
-              color: '#666',
+              color: 'primary.secondaryColor',
               fontSize: '12px',
               textAlign: 'center',
             }}
@@ -78,7 +81,9 @@ const Footer = () => {
               alignItems: 'center',
             }}
           >
-            <Typography sx={{ color: '#666', fontSize: '12px' }}>
+            <Typography
+              sx={{ color: 'primary.secondaryColor', fontSize: '12px' }}
+            >
               Follow Us On
             </Typography>
             <Box sx={{ gap: 1, display: 'flex' }}>

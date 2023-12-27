@@ -11,7 +11,6 @@ const TopContent = () => {
 
   const HEADER_STYLE = {
     fontFamily: 'montserrat',
-    fontSize: '12px',
     fontWeight: 'bold',
     cursor: 'pointer',
     '&:hover': { textDecoration: 'underline' },
@@ -25,35 +24,40 @@ const TopContent = () => {
         display: 'flex',
         justifyContent: { lg: 'space-between', md: 'center', xs: 'end' },
         width: '100vw',
-        backgroundColor: '#111',
-        color: '#fff',
+        backgroundColor: 'primary.bg',
+        color: 'primary.color',
         p: '10px 20px',
       }}
     >
       <Typography
         sx={{
-          color: '#fff',
+          color: 'primary.color',
           display: 'flex',
           gap: 2,
           textAlign: { xs: 'left', md: 'center' },
         }}
       >
-        <Typography sx={HEADER_STYLE}>ĐẠI LỘC INTERIOR DECOR</Typography>
-        <Typography sx={{ fontSize: '12px', fontWeight: '900', color: '#666' }}>
+        <Typography variant="detailsText" sx={HEADER_STYLE}>
+          ĐẠI LỘC INTERIOR DECOR
+        </Typography>
+        <Typography
+          variant="detailsText"
+          sx={{ fontWeight: '900', color: '#666' }}
+        >
           |
         </Typography>
         <Typography
+          variant="detailsText"
           sx={{
             fontFamily: 'montserrat',
-            fontSize: '12px',
             fontWeight: 'light',
             cursor: 'pointer',
             '&:hover': {
               textDecoration: 'underline',
-              color: '#fff',
+              color: 'primary.color',
               transition: 'color 200ms ease-in-out',
             },
-            color: '#666',
+            color: 'primary.secondaryColor',
           }}
         >
           ONLINE STORE
@@ -61,7 +65,9 @@ const TopContent = () => {
       </Typography>
       {isShowHotlineAndLang && (
         <Box sx={BOX_HEADER_STYLE}>
-          <Typography sx={HEADER_STYLE}>HOTLINE: 0932 841 842</Typography>
+          <Typography variant="detailsText" sx={HEADER_STYLE}>
+            HOTLINE: 0932 841 842
+          </Typography>
           <Typography
             sx={{
               display: 'flex',
@@ -77,10 +83,10 @@ const TopContent = () => {
             ENG
           </Typography>
           <Typography
+            variant="detailsText"
             sx={{
               display: 'flex',
               alignItems: 'center',
-              fontSize: '12px',
               gap: 1,
               fontFamily: 'montserrat',
               cursor: 'pointer',

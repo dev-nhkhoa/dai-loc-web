@@ -12,7 +12,7 @@ const BottomContent = () => {
         width: '100%',
         display: 'flex',
         gap: 2,
-        backgroundColor: '#111',
+        backgroundColor: 'primary.bg',
         alignItems: 'center',
         justifyContent: {
           lg: 'center',
@@ -23,10 +23,10 @@ const BottomContent = () => {
       }}
     >
       <Typography
+        variant="mainText"
         sx={{
-          fontSize: '20.5px',
           fontFamily: 'montserrat',
-          color: '#fff',
+          color: 'primary.color',
           cursor: 'pointer',
           letterSpacing: '8px',
           display: 'flex',
@@ -47,7 +47,7 @@ const BottomContent = () => {
           <Text name={'LIÊN HỆ'} />
         </Box>
       )}
-      <SearchIcon sx={{ color: '#fff' }} />
+      <SearchIcon sx={{ color: 'primary.color' }} />
     </Box>
   );
 };
