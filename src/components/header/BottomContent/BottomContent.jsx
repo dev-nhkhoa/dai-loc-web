@@ -1,5 +1,5 @@
 import { Box, Typography, useMediaQuery } from '@mui/material';
-import Text from './Text';
+import Text from '../../Text';
 import SearchIcon from '@mui/icons-material/Search';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 
