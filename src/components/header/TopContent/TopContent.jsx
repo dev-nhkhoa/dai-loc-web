@@ -23,7 +23,7 @@ const TopContent = () => {
       sx={{
         display: 'flex',
         justifyContent: { lg: 'space-between', md: 'center', xs: 'end' },
-        width: '100vw',
+        width: '100%',
         backgroundColor: 'primary.bg',
         color: 'primary.color',
         p: '10px 20px',

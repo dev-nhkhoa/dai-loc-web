@@ -7,8 +7,8 @@ const App = () => {
   return (
     <Box
       sx={{
-        minWidth: '100%',
-        minHeight: '100vh',
+        maxWidth: '100%',
+        minHeight: '100%',
         backgroundColor: '#1d1c1c',
       }}
     >
