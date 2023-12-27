@@ -12,6 +12,7 @@ const BottomContent = () => {
         backgroundColor: '#111',
         alignItems: 'center',
         justifyContent: 'center',
+        p: '10px 5px',
       }}
     >
       <Typography
