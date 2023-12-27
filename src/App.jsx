@@ -1,6 +1,7 @@
 import { Box } from '@mui/material';
 import Order from './pages/orders/Order';
 import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
     >
       <Header />
       <Order />
+      <Footer />
     </Box>
   );
 };
