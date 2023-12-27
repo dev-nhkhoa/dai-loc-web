@@ -1,7 +1,7 @@
 import { Box, SvgIcon, Typography } from '@mui/material';
 import '@fontsource/montserrat/300.css';
-import SvgUs from '../../assets/logo/SvgUs';
-import SvgVn from '../../assets/logo/SvgVn';
+import SvgUs from '../../../assets/logo/SvgUs';
+import SvgVn from '../../../assets/logo/SvgVn';
 
 const TopContent = () => {
   const HEADER_STYLE = {
