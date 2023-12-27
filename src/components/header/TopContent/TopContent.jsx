@@ -1,8 +1,8 @@
 import { Box, SvgIcon, Typography } from '@mui/material';
 import '@fontsource/montserrat/300.css';
-import SvgUs from '../../../assets/logo/SvgUs';
-import SvgVn from '../../../assets/logo/SvgVn';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import SvgUsFlag from 'damocloids-library/media/SvgIcons/SvgUsFlag';
+import SvgVnFlag from 'damocloids-library/media/SvgIcons/SvgVnFlag';
 
 const TopContent = () => {
   const isShowHotlineAndLang = useMediaQuery((theme) =>
@@ -73,7 +73,7 @@ const TopContent = () => {
               '&:hover': { textDecoration: 'underline' },
             }}
           >
-            <SvgIcon component={SvgUs} inheritViewBox fontSize="small" />
+            <SvgIcon component={SvgUsFlag} inheritViewBox fontSize="small" />
             ENG
           </Typography>
           <Typography
@@ -87,7 +87,7 @@ const TopContent = () => {
               '&:hover': { textDecoration: 'underline' },
             }}
           >
-            <SvgIcon component={SvgVn} inheritViewBox fontSize="small" />
+            <SvgIcon component={SvgVnFlag} inheritViewBox fontSize="small" />
             VIE
           </Typography>
         </Box>

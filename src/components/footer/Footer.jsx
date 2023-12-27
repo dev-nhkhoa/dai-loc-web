@@ -2,10 +2,10 @@ import { Box, SvgIcon, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import Text from '../Text';
 import Divider from '../Divider';
-import SvgFacebook from '../../assets/logo/SvgFacebook';
-import SvgTiktok from '../../assets/logo/SvgTiktok';
-import SvgYoutube from '../../assets/logo/SvgYoutube';
-import SvgInstagram from '../../assets/logo/SvgInstagram';
+import SvgFacebook from 'damocloids-library/media/SvgIcons/SvgFacebook';
+import SvgTiktok from 'damocloids-library/media/SvgIcons/SvgTiktok';
+import SvgYoutube from 'damocloids-library/media/SvgIcons/SvgYoutube';
+import SvgInstagram from 'damocloids-library/media/SvgIcons/SvgInstagram';
 
 const Footer = () => {
   return (
