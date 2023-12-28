@@ -3,7 +3,7 @@ import Text from '../../Text';
 import SearchIcon from '@mui/icons-material/Search';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 
-const BottomContent = () => {
+const HeaderBottomContent = () => {
   const isShowTexts = useMediaQuery((theme) => theme.breakpoints.up('lg'));
 
   return (
@@ -52,4 +52,4 @@ const BottomContent = () => {
   );
 };
 
-export default BottomContent;
+export default HeaderBottomContent;

@@ -4,7 +4,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import SvgUsFlag from 'damocloids-library/media/SvgIcons/SvgUsFlag';
 import SvgVnFlag from 'damocloids-library/media/SvgIcons/SvgVnFlag';
 
-const TopContent = () => {
+const HeaderTopContent = () => {
   const isShowHotlineAndLang = useMediaQuery((theme) =>
     theme.breakpoints.up('lg')
   );
@@ -12,6 +12,16 @@ const TopContent = () => {
   const HEADER_STYLE = {
     fontFamily: 'montserrat',
     fontWeight: 'bold',
+    cursor: 'pointer',
+    '&:hover': { textDecoration: 'underline' },
+  };
+
+  const LANG_TEXT = {
+    display: 'flex',
+    alignItems: 'center',
+    fontSize: '12px',
+    gap: 1,
+    fontFamily: 'montserrat',
     cursor: 'pointer',
     '&:hover': { textDecoration: 'underline' },
   };
@@ -68,31 +78,11 @@ const TopContent = () => {
           <Typography variant="detailsText" sx={HEADER_STYLE}>
             HOTLINE: 0932 841 842
           </Typography>
-          <Typography
-            sx={{
-              display: 'flex',
-              alignItems: 'center',
-              fontSize: '12px',
-              gap: 1,
-              fontFamily: 'montserrat',
-              cursor: 'pointer',
-              '&:hover': { textDecoration: 'underline' },
-            }}
-          >
+          <Typography sx={LANG_TEXT}>
             <SvgIcon component={SvgUsFlag} inheritViewBox fontSize="small" />
             ENG
           </Typography>
-          <Typography
-            variant="detailsText"
-            sx={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: 1,
-              fontFamily: 'montserrat',
-              cursor: 'pointer',
-              '&:hover': { textDecoration: 'underline' },
-            }}
-          >
+          <Typography variant="detailsText" sx={LANG_TEXT}>
             <SvgIcon component={SvgVnFlag} inheritViewBox fontSize="small" />
             VIE
           </Typography>
@@ -102,4 +92,4 @@ const TopContent = () => {
   );
 };
 
-export default TopContent;
+export default HeaderTopContent;
