@@ -1,15 +1,15 @@
 import '@fontsource/montserrat/500.css';
-import BottomContent from './BottomContent/BottomContent';
-import TopContent from './TopContent/TopContent';
+import HeaderBottomContent from './HeaderBottomContent/HeaderBottomContent';
+import HeaderTopContent from './HeaderTopContent/HeaderTopContent';
 import { Box } from '@mui/material';
 import Divider from '../Divider';
 
 const Header = () => {
   return (
     <Box>
-      <TopContent />
+      <HeaderTopContent />
       <Divider />
-      <BottomContent />
+      <HeaderBottomContent />
     </Box>
   );
 };
