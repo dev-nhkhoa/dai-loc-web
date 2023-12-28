@@ -1,33 +1,43 @@
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import CustomerInfo from './CustomerInfo';
-import OrderTable from './OrderTable';
+import { Box, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
+
+// eslint-disable-next-line react/prop-types
+const LinkToPage = ({ to, path }) => {
+  return (
+    <Link to={path}>
+      <Typography
+        variant="detailText"
+        sx={{
+          color: '#fff',
+          '&:hover': {
+            textDecoration: 'underline',
+            color: '#111',
+          },
+        }}
+      >
+        {to}
+      </Typography>
+    </Link>
+  );
+};
 
 const Order = () => {
   return (
     <Box
       sx={{
+        height: '100%',
+        backgroundColor: '#666',
         display: 'flex',
-        flexDirection: 'column',
-        color: 'primary.main',
-        height: '100vh',
-        alignItems: 'center',
+        justifyContent: 'center',
+        paddingY: 2,
         gap: 2,
-        overflow: 'auto',
+        color: '#fff',
+        cursor: 'pointer',
       }}
     >
-      <Typography variant="mainText" color="primary.color" sx={{ pt: 2 }}>
-        NHẬP ĐƠN HÀNG MỚI
-      </Typography>
-
-      <Box sx={{ width: 1200, px: 3 }}>
-        <CustomerInfo title={'TÊN KHÁCH HÀNG'} width={500} />
-        <CustomerInfo title={'CÔNG TRÌNH'} width={500} />
-        <CustomerInfo title={'SĐT KHÁCH HÀNG'} width={100} />
-        <CustomerInfo title={'MÃ ĐƠN HÀNG'} width={100} />
-      </Box>
-
-      <OrderTable />
+      <LinkToPage to={'Lấy hàng'} path={'/import-products'} />
+      <LinkToPage to={'Báo giá'} path={'/price-for-customer'} />
+      <LinkToPage to={'Phiếu bán hàng & Giao hàng'} path={'/ship-and-print'} />
     </Box>
   );
 };
