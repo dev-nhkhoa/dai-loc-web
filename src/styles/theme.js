@@ -13,6 +13,7 @@ export const theme = extendTheme({
         root: {
           mainText: { fontSize: '22.5px' },
           detailsText: { fontSize: '12px' },
+          DLHeader: { fontSize: '18px' },
         },
       },
     },
