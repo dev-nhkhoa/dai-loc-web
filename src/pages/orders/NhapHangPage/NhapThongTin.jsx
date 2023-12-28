@@ -6,7 +6,7 @@ import InputBase from '@mui/material/InputBase';
 const BootstrapInput = styled(InputBase)(
   ({ theme, width, textColor, borderColor }) => ({
     '& .MuiInputBase-input': {
-      borderRadius: 4,
+      borderRadius: 8,
       position: 'relative',
       backgroundColor: 'primary.bg',
       fontSize: '12px',
@@ -17,18 +17,18 @@ const BootstrapInput = styled(InputBase)(
         borderColor: borderColor,
       },
     },
-    '& input': { color: textColor },
+    '& input': { color: textColor, textAlign: 'center' },
   })
 );
 
 // eslint-disable-next-line react/prop-types
-const InputField = ({ width, textColor, borderColor, dfValue, id }) => {
+const NhapThongTin = ({ width, textColor, borderColor, dfValue, id }) => {
   return (
     <Box sx={{}}>
       <FormControl variant="standard" sx={{ mt: '1px' }}>
         <BootstrapInput
           defaultValue={dfValue ? dfValue : ''}
-          id={id ? id : ''}
+          id={id}
           width={width ? width : 'auto'}
           textColor={textColor ? textColor : '#fff'}
           borderColor={borderColor ? borderColor : '#fff'}
@@ -38,4 +38,4 @@ const InputField = ({ width, textColor, borderColor, dfValue, id }) => {
   );
 };
 
-export default InputField;
+export default NhapThongTin;
