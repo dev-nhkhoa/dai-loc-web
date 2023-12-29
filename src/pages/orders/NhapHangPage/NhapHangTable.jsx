@@ -11,28 +11,11 @@ import { Box, Button, Tooltip, Typography } from '@mui/material';
 import React from 'react';
 import NhapThongTin from './NhapThongTin';
 
-/**
- *
- * @param {*} name tên sản phẩm
- * @param {*} qty số lượng sản phẩm
- * @param {*} unit đơn vị sản phẩm
- * @param {*} price giá tiền sản phẩm
- * @param {*} note ghi chú sản phẩm
- * @returns trả về 1 object kèm theo tính toán tổng giá tiền từ giá sản phẩm * số lượng sản phẩm
- */
-
-// TODO:
-// eslint-disable-next-line no-unused-vars
-function createRow(name, unit, qty, price, note) {
-  const priceByQty = qty * price;
-  return { name, unit, qty, price, priceByQty, note };
-}
-
 const NhapHangTable = () => {
-  const [rows, setRow] = React.useState([]);
+  const [items, setItems] = React.useState([]);
 
   const handleAddRowClicked = () => {
-    setRow([...rows, {}]);
+    setItems([...items, {}]);
   };
 
   return (
@@ -109,7 +92,7 @@ const NhapHangTable = () => {
               </TableRow>
             </TableHead>
             <TableBody>
-              {rows.map((row, index) => (
+              {items.map((row, index) => (
                 <TableRow
                   key={index}
                   sx={{

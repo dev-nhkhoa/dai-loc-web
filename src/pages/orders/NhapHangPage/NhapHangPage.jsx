@@ -1,55 +1,12 @@
 import NhapHangTable from './NhapHangTable';
 import Box from '@mui/material/Box';
-// import Typography from '@mui/material/Typography';
-// import InputBase from '@mui/material/InputBase';
-// import SearchIcon from '@mui/icons-material/Search';
-// import styled from '@emotion/styled';
-// import { alpha } from '@mui/material';
 import { Button } from '@mui/material';
-
-// const Search = styled('div')(({ theme }) => ({
-//   position: 'relative',
-//   borderRadius: theme.shape.borderRadius,
-//   backgroundColor: alpha(theme.palette.common.white, 0.15),
-//   '&:hover': {
-//     backgroundColor: alpha(theme.palette.common.white, 0.25),
-//   },
-//   marginLeft: 0,
-//   width: '100%',
-//   [theme.breakpoints.up('sm')]: {
-//     marginLeft: theme.spacing(1),
-//     width: 'auto',
-//   },
-// }));
-
-// const SearchIconWrapper = styled('div')(({ theme }) => ({
-//   padding: theme.spacing(0, 2),
-//   height: '100%',
-//   position: 'absolute',
-//   pointerEvents: 'none',
-//   display: 'flex',
-//   alignItems: 'center',
-//   justifyContent: 'center',
-// }));
-
-// const StyledInputBase = styled(InputBase)(({ theme }) => ({
-//   color: 'inherit',
-//   width: '100%',
-//   '& .MuiInputBase-input': {
-//     padding: theme.spacing(1, 1, 1, 0),
-//     // vertical padding + font size from searchIcon
-//     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-//     transition: theme.transitions.create('width'),
-//     [theme.breakpoints.up('sm')]: {
-//       width: '12ch',
-//       '&:focus': {
-//         width: '20ch',
-//       },
-//     },
-//   },
-// }));
+import { donHang as MockDonHang, donHangMoi } from '~/lib/mock_data';
+import SimpleDialogDemo from './DialogChinhSuaDonHang';
+import React from 'react';
 
 const NhapHangPage = () => {
+  const [donHang, setDonHang] = React.useState(MockDonHang);
   return (
     <Box
       sx={{
@@ -69,7 +26,14 @@ const NhapHangPage = () => {
           px: 30,
         }}
       >
-        <Button sx={{ cursor: 'pointer' }}>Đơn hàng mới</Button>
+        <Button
+          sx={{ cursor: 'pointer' }}
+          onClick={() => {
+            setDonHang([...donHang, donHangMoi]);
+          }}
+        >
+          Đơn hàng mới
+        </Button>
         {/* làm một input để tìm kiếm theo tên công trình, mã đơn hàng, tên KH hoặc tên mình tự đặt. Tạo thêm nameDonHang trong mock_data (làm sau vì khó)*/}
         <Box
           sx={{
@@ -79,16 +43,7 @@ const NhapHangPage = () => {
           }}
         >
           {/* Khi nhấn, hiện bảng full các đơn để user chọn. Khi chọn xong sẽ đổ data vào bảng */}
-          <Button>Chỉnh sửa đơn cũ</Button>
-          {/* <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Mã đơn hàng, tên KH, ngày,..."
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </Search> */}
+          <SimpleDialogDemo donHang={donHang} />
         </Box>
 
         {/* 
