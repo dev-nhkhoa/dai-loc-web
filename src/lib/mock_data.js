@@ -6,6 +6,10 @@ export const findDetailItemsVidId = (id) => {
   return findViaIdDonHang(id).detailItems;
 };
 
+const taoIdMoiChoDonHang = () => {
+  return `DL${donHang.length + 1}`;
+};
+
 export function calcTotalGiaBanVidId(id) {
   let result = 0;
   const items = findDetailItemsVidId(id);
@@ -19,6 +23,7 @@ export function calcTotalGiaBanVidId(id) {
 export const donHang = [
   {
     _id: 'DL0001',
+    name: 'Đơn Hàng Mẫu',
     customer_info: {
       name: 'Trương Nguyễn Anh Khoa',
       build_name: 'Công Trình ven biển',
@@ -49,3 +54,36 @@ export const donHang = [
     ],
   },
 ];
+
+export const donHangMoi = {
+  _id: taoIdMoiChoDonHang(),
+  name: '',
+  customer_info: {
+    name: '',
+    build_name: '',
+    phone: '',
+    address: '',
+  },
+  created_date: '',
+  created_time: '',
+  giaoHang_date: '',
+  giaohang_time: '',
+  thanhToan: true,
+  thanhToan_date: '',
+  thanhToan_time: '',
+  detailItems: [
+    {
+      name: '',
+      donVi: '',
+      soLuong: 0,
+      donGia: 0,
+      giaNhap: 0,
+      giaBan: 0,
+      thanhTienGiaNhap: (giaNhap, soLuong) => giaNhap * soLuong,
+      thanhTienGiaBan: (giaBan, soLuong) => giaBan * soLuong,
+      tienLoi: (thanhTienGiaBan, thanhTienGiaNhap) =>
+        thanhTienGiaBan - thanhTienGiaNhap,
+      note: '',
+    },
+  ],
+};

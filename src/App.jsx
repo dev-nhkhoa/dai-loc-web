@@ -3,9 +3,8 @@ import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import Order from '~/pages/orders/Order';
 import { Routes, Route } from 'react-router-dom';
-import ImportProducts from './pages/orders/ImportProducts/ImportProducts';
-import Delivery from './pages/orders/Delivery/Delivery';
 import PriceForCustomer from './pages/orders/PriceForCustomer/PriceForCustomer';
+import NhapHangPage from './pages/orders/NhapHangPage/NhapHangPage';
 
 const App = () => {
   return (
@@ -20,8 +19,7 @@ const App = () => {
       <Order />
       <Routes>
         {/* in development */}
-        <Route path="/import-products" element={<ImportProducts />} />
-        <Route path="/ship-and-print" element={<Delivery />} />
+        <Route path="/import-products" element={<NhapHangPage />} />
         <Route path="/price-for-customer" element={<PriceForCustomer />} />
       </Routes>
       <Footer />
