@@ -39,7 +39,7 @@ const HeaderBottomContent = () => {
       </Typography>
       {isShowTexts && (
         <Box sx={{ display: 'flex', gap: 2 }}>
-          <Text name={'GIỚI THIỆU'} />
+          <Text name={'GIỚI THIỆU'} link={'/gioi-thieu'} />
           <Text name={'TRANG TRÍ NỘI THẤT'} />
           <Text name={'CÔNG TRÌNH'} />
           <Text name={'NỘI THẤT'} />
