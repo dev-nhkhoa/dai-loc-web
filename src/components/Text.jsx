@@ -6,7 +6,10 @@ const Text = ({ name, props }) => {
     <Typography
       variant="mainText"
       sx={{
-        fontSize: { lg: '22.5px', md: '17.5px', sm: '14.5px', xs: '13.5px' },
+        fontSize: {
+          xl: '28px',
+          xs: '20.5px',
+        },
         fontFamily: 'montserrat',
         color: 'primary.secondaryColor',
         cursor: 'pointer',

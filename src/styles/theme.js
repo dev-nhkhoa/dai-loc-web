@@ -4,20 +4,10 @@ const APP_BAR_HEIGHT = '58px';
 
 export const theme = extendTheme({
   typography: {
-    mainText: { fontSize: '22.5px' },
-    detailsText: { fontSize: '12px' },
+    mainText: { fontSize: '40.5px' },
+    detailsText: { fontSize: '20px' },
   },
-  components: {
-    MuiTypography: {
-      styleOverrides: {
-        root: {
-          mainText: { fontSize: '22.5px' },
-          detailsText: { fontSize: '12px' },
-          DLHeader: { fontSize: '18px' },
-        },
-      },
-    },
-  },
+  components: {},
   dailoc: {
     appBarHeight: APP_BAR_HEIGHT,
     padding: '20px',
