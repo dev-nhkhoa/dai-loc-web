@@ -19,7 +19,6 @@ const HeaderTopContent = () => {
   const LANG_TEXT = {
     display: 'flex',
     alignItems: 'center',
-    fontSize: '12px',
     gap: 1,
     fontFamily: 'montserrat',
     cursor: 'pointer',
@@ -39,7 +38,7 @@ const HeaderTopContent = () => {
         p: '10px 20px',
       }}
     >
-      <Typography
+      <Box
         sx={{
           color: 'primary.color',
           display: 'flex',
@@ -60,7 +59,6 @@ const HeaderTopContent = () => {
           variant="detailsText"
           sx={{
             fontFamily: 'montserrat',
-            fontWeight: 'light',
             cursor: 'pointer',
             '&:hover': {
               textDecoration: 'underline',
@@ -72,13 +70,13 @@ const HeaderTopContent = () => {
         >
           ONLINE STORE
         </Typography>
-      </Typography>
+      </Box>
       {isShowHotlineAndLang && (
         <Box sx={BOX_HEADER_STYLE}>
           <Typography variant="detailsText" sx={HEADER_STYLE}>
             HOTLINE: 0932 841 842
           </Typography>
-          <Typography sx={LANG_TEXT}>
+          <Typography variant="detailsText" sx={LANG_TEXT}>
             <SvgIcon component={SvgUsFlag} inheritViewBox fontSize="small" />
             ENG
           </Typography>
