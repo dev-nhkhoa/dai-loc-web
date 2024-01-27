@@ -1,31 +1,19 @@
-import { Box } from '@mui/material';
-import Header from './components/header/Header';
-import Footer from './components/footer/Footer';
-import { Routes, Route } from 'react-router-dom';
-// import PriceForCustomer from './pages/orders/PriceForCustomer/PriceForCustomer';
-// import NhapHangPage from './pages/orders/NhapHangPage/NhapHangPage';
-import GioiThieu from './pages/GioiThieu/GioiThieu';
+import { Box } from '@mui/material'
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home/Home'
+import Header from './components/Header/Header'
 
 const App = () => {
   return (
-    <Box
-      sx={{
-        maxWidth: '100%',
-        minHeight: '100%',
-        backgroundColor: '#1d1c1c',
-      }}
-    >
-      <Header />
-      <Routes>
-        <Route path="/" element={<GioiThieu />} />
-        <Route path="/gioi-thieu" element={<GioiThieu />} />
-        {/* in development */}
-        {/* <Route path="/import-products" element={<NhapHangPage />} />
-        <Route path="/price-for-customer" element={<PriceForCustomer />} /> */}
-      </Routes>
-      <Footer />
+    <Box sx={{ maxWidth: '100%', height: '100%', display: 'flex', justifyContent: 'center' }}>
+      <Box sx={{ width: { sm: '600px', sx: '350px' }, display: 'flex', flexDirection: 'column' }}>
+        <Header />
+        <Routes>
+          <Route path='/' element={<Home />} />
+        </Routes>
+      </Box>
     </Box>
-  );
-};
+  )
+}
 
-export default App;
+export default App

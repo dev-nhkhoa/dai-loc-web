@@ -1,17 +1,16 @@
-import '@fontsource/montserrat/500.css';
-import HeaderBottomContent from './HeaderBottomContent/HeaderBottomContent';
-import HeaderTopContent from './HeaderTopContent/HeaderTopContent';
-import { Box } from '@mui/material';
-import Divider from '../Divider';
+import { Box, Typography } from '@mui/material'
+import { MESSAGE } from '../../language'
+import ViewHeadlineIcon from '@mui/icons-material/ViewHeadline'
 
 const Header = () => {
   return (
-    <Box>
-      <HeaderTopContent />
-      <Divider />
-      <HeaderBottomContent />
+    <Box sx={{ backgroundColor: '#000', display: 'flex', justifyContent: 'space-between', alignItems: 'center', p: '5px 10px' }}>
+      <ViewHeadlineIcon fontSize='large' sx={{ color: '#fff' }} />
+      <Typography variant='mainText' color='#fff' sx={{ fontWeight: '500' }}>
+        {MESSAGE.name.toUpperCase()}
+      </Typography>
     </Box>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
